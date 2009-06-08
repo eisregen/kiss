@@ -6,6 +6,17 @@ this quite little project.
   http://en.wikipedia.org/wiki/KISS_principle
 
 
+TODO
+
+ * page sensitive HTML-title (mainpage > subpage)
+ * autoreference between blocks and pages
+ * implementation of a low, really low level template system
+    (replacement of creation date, author, aso)
+ * changing order of Blocks in Pages, adding or removing Blocks from Pages after
+    creation
+ * changing the title of a Page after creation
+
+
 QUICK START
 
 First, you need to edit the main configuration: config.yaml.
