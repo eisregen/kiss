@@ -10,7 +10,7 @@ QUICK START
 THE FILESTRUCTURE
 
     bin
-        contains the main script 'cms' and additional, required, files.
+        contains the main script 'cms' and additional, required files.
 
     blk
         all blocks that can be used are stored here. Besides the blocks
@@ -19,10 +19,10 @@ THE FILESTRUCTURE
 
     pgs
         the pgs directory is the home of all page HTML-files. There resides also
-        files, which contains all blocks used by the pages.
+        files, which contains the name of all blocks used by the pages.
 
     tpl
-        here goes everystuff you can call a template (he head.html and
+        here goes every stuff you can call a template (the head.html and
         foot.html e.g.).
 
     web
