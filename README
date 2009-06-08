@@ -8,7 +8,101 @@ this quite little project.
 
 QUICK START
 
---> todo
+First, you need to edit the main configuration: config.yaml.
+In most of the cases, it is not necessary to edit parts of the system section.
+
+After setting up the ownerinformation, we will start with the page-concept
+itself.
+
+Everything relays on the so called Blocks. A Block representates a piece of
+content, like a little box, filled with text.
+
+So, you can create Boxes the following way (every of the following commands MUST
+be executed from root directory of the page, this is where 'config.yaml' lays):
+
+'bin/cms mkblock alphanumericBlockname'
+
+An Editor will start, here you can enter textile-markup:
+  http://hobix.com/textile/
+
+After closing, this block has been saved automatically. Feel free to add a few
+more.
+
+'bin/cms lsblock' gives you a brief list of all installed blocks.
+
+With 'bin/cms chblock blockname' you can change the content of a previous gernerated
+block.
+
+For remove, guess which command is needed:
+
+'bin/cms rmblock blockname'
+
+
+
+After creation og this blocks, you shure asking yourself: "But where is my
+freshly gernerated online, now?".
+
+Here comes the next mysterious thing: a Page.
+
+A Page contains one or more defineable blocks. Its simple, first create a page:
+
+'bin/cms mkpage pagename "title" one or more blocknames'
+
+The pagename needs also to be alphanumeric, the title should be quoted, so it can
+contain almost every character. The blocks are just written at the end,
+separated by a simple space.
+
+The title will appear (in further versions) as part of the HTML-Title. Also it
+is used as the label of the menu-link. So choose it correct. This first beta
+gives you NOT the ability to change the title after creation. (This feature is
+on the top of the TODO-list)
+
+Go ahead and get familiar with pages. Just create a few. Blocks can be used more
+than one time in different pages.
+
+Now the bad news. The beta-Version lacks of a correct dependecy check. So,
+after creating your sites, do a simple 'bin/cmd uppage pagename' on every page.
+
+To watch your work, you can list all pages with 'bin/cmd lspage'. If you want to
+see details of a page, give the pagename as second argument, and watch the
+magical output.
+
+Now, the last important thing is the assortnig of the pages.
+
+Show the list with lspage again. The first Page is defined with the number 0.
+The following are numbererd in ascending order.
+
+Now you can change the placement of the pages with following command:
+'bin/cms mvpage up/down/index'
+up and down should be clear. Dont be scared, the programm doesnt segfault, if
+you get out of the index.
+
+Besides up/down you can give an index. This is the index of the Page, whose
+position will be swapped with the selected page.
+
+Play a little bit with this functionality.
+
+Now, the last step: GETTING ONLINE
+
+For activation of the page just type:
+'bin/cms build'
+
+This creates all necesserie symlinks.
+
+Now, open the web-dir in your browser and watch. No PHP, no mySQL, but kind of
+dynamic.  ;)
+
+For changing Blocks, type first:
+
+'bin/cms chblock blockname'
+after saving, all pages containig this  block needs to be updated manually:
+'bin/cms uppage pagename'
+Again, this is a bad feature of the beta, the next version will do all this
+uppage and build command itself.
+
+Sorry for my english, I'm still lerning by doing.
+
+Code-Comment will also follow in the next versions.
 
 
 THE FILESTRUCTURE
