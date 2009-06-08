@@ -1,0 +1,38 @@
+KISS - A simple, lighweight and static Ruby CMS
+===============================================
+
+
+QUICK START
+
+--> todo
+
+
+THE FILESTRUCTURE
+
+    bin
+        contains the main script 'cms' and additional, required, files.
+
+    blk
+        all blocks that can be used are stored here. Besides the blocks
+        themselves, additional files, like the converted HTML-Blockfiles, are
+        stored here
+
+    pgs
+        the pgs directory is the home of all page HTML-files. There resides also
+        files, which contains all blocks used by the pages.
+
+    tpl
+        here goes everystuff you can call a template (he head.html and
+        foot.html e.g.).
+
+    web
+        this is the root of the webpage itself. All the pages (and the planned
+        subpages) are symlinked together here.
+
+
+THE CONFIGURATION
+
+
+COMMANDS
+
+
