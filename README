@@ -16,6 +16,12 @@ TODO
  * changing order of Blocks in Pages, adding or removing Blocks from Pages after
     creation
  * changing the title of a Page after creation
+ * a mtylesheet-management. This would it make possible to host more than one
+    css-File, and the desired one can be changed via a command. This would
+    minimize the HTML-Usage while styling (one of the KISS-CMS goals)
+ * some kind of file-management. An automated upload via scp or sshfs or ftp or
+    airmail or what ever :) The file-list could be updated through the shell
+    also, a huge rise in usability
 
 
 QUICK START
