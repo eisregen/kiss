@@ -1,0 +1,53 @@
+#!/usr/bin/ruby
+#
+# written by Jakob Holderbaum
+#
+
+
+require 'bin/block'
+require 'bin/page'
+require 'bin/build'
+
+
+case ARGV[0]
+when 'help'
+    puts 'usage: cms command [args]'
+    puts 'commands:'
+    puts '  mkblock [blockname]                    - creates a block'
+    puts '  mkpage [pagename] [list of blocks]     - creates a page with given blocks'
+    puts '  rmpage [pagename]                      - removes given page (blocks will remain)'
+    puts '  uppage [pagename]                      - upadates page (navigation and blocks)'
+    puts '  build                                  - compose it, baby ;)'
+     
+when 'mkblock'
+    mkblock ARGV[1]
+
+when 'rmblock'
+    rmblock ARGV[1]
+
+when 'chblock'
+    chblock ARGV[1]
+
+when 'lsblock'
+    lsblock ARGV[1]
+
+when 'mkpage'
+    mkpage(ARGV[1],ARGV[2],ARGV[3..-1])
+
+when 'rmpage'
+    rmpage ARGV[1]
+
+when 'uppage'
+    uppage ARGV[1]
+
+when 'lspage'
+    lspage ARGV[1]
+
+when 'mvpage'
+    mvpage ARGV[1],ARGV[2]
+
+when 'build'
+    build
+
+end
+
